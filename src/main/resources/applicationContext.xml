@@ -19,14 +19,8 @@
     </bean>
 
     <bean id="musicPlayer"
-        class="ru.dp29.springEx.MusicPlayer">
-        <property name="musicList">
-            <list value-type="ru.dp29.springEx.Music">
-                <ref bean="classicMusicBean" />
-                <ref bean="rockMusicBean" />
-                <ref bean="jazMusicBean" />
-            </list>
-        </property>
+        class="ru.dp29.springEx.MusicPlayer" scope="prototype">
+        <property name="music" ref="classicMusicBean" />
         <property name="name" value="${musicPlayer.name}" />
         <property name="volume" value="${musicPlayer.volume}" />
     </bean>
