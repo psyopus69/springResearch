@@ -12,7 +12,11 @@
           class="ru.dp29.springEx.RockMusic">
     </bean>
     <bean id="classicMusicBean"
-            class="ru.dp29.springEx.ClassicalMusic">
+          class="ru.dp29.springEx.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic"
+    >
     </bean>
     <bean id="jazMusicBean"
           class="ru.dp29.springEx.JazMusic">
@@ -20,7 +24,6 @@
 
     <bean id="musicPlayer"
         class="ru.dp29.springEx.MusicPlayer" scope="prototype">
-        <property name="music" ref="classicMusicBean" />
         <property name="name" value="${musicPlayer.name}" />
         <property name="volume" value="${musicPlayer.volume}" />
     </bean>
