@@ -40,6 +40,10 @@ public class TestSpring {
 //
 //        Computer computer = context.getBean("computer", Computer.class);
 //        System.out.println(computer);
+        ClassicalMusic cm = context.getBean("classicalMusic", ClassicalMusic.class);
+        System.out.println(cm.getName());
+        System.out.println(cm.getVolume());
+
         context.close();
     }
 }
