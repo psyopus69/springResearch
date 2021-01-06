@@ -1,5 +1,8 @@
 package ru.dp29.springEx;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music {
     private ClassicalMusic() {}
 
@@ -13,7 +16,7 @@ public class ClassicalMusic implements Music {
     public void doMyDestroy() {
         System.out.println("Doing my destruction");
     }
-
+    @Override
     public String getSong() {
         return "Biggie Smalls";
     }
