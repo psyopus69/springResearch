@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class JazMusic implements Music{
     @Override
-    public ArrayList<String> getSongs() {
-        return new ArrayList<>(Arrays.asList("Ray Jones", "someBlues Author"));
+    public String getSong() {
+        return "Ray Jones";
     }
 }

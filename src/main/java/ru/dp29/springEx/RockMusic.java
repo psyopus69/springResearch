@@ -7,11 +7,7 @@ import java.util.ArrayList;
 @Component
 public class RockMusic implements Music {
     @Override
-    public ArrayList<String> getSongs() {
-        ArrayList<String> songs = new ArrayList<>(3);
-        songs.add("Offspring");
-        songs.add("Papa Roach");
-        songs.add("Beastie Boys");
-        return songs;
+    public String getSong() {
+        return "Beastie Boys";
     }
 }

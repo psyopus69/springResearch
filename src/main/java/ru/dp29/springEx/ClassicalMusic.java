@@ -1,6 +1,8 @@
 package ru.dp29.springEx;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 public class ClassicalMusic implements Music {
@@ -13,11 +15,8 @@ public class ClassicalMusic implements Music {
         System.out.println("doing my destroy");
     }
     @Override
-    public ArrayList<String> getSongs() {
+    public String getSong() {
         ArrayList<String> songs = new ArrayList<>();
-        songs.add("Biggie Smalls");
-        songs.add("2pac");
-        songs.add("run DMC");
-        return songs;
+        return "Biggie Smalls";
     }
 }
