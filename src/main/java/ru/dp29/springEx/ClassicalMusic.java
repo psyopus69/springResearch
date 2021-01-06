@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
+
 public class ClassicalMusic implements Music {
     @Value("${musicPlayer.name}")
     private String name;
